@@ -1,0 +1,57 @@
+
+#three{
+  background-color: #F4F5F7;
+  .articles-block{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    .articles__header{
+      margin: 0;
+      font-style: normal;
+      font-weight: 100;
+      font-size: 40px;
+      line-height: 64px;
+      letter-spacing: -0.714286px;
+      color: $header-color;
+    }
+    .articles-list{
+      @include reset-list;
+      margin-top: 42px;
+      display: flex;
+      justify-content: space-between;
+      .articles-list__item{
+        width: 255px;
+        background-color: #fff;
+        overflow: hidden;
+        transition: all .4s ease-in-out;
+        &:hover{
+          background: rgba(170, 254, 198, 0.3);
+          z-index: 0;
+          box-shadow: 0 8px 40px -10px rgb(3, 117, 41);
+        }
+
+        .articles-list__username{
+          margin-left: 24px;
+        }
+        .articles-list__mini-header{
+          margin: 0 24px;
+          color: $header-color;
+          font-style: normal;
+          font-weight: 100;
+          font-size: 16px;
+          line-height: 20px;
+          letter-spacing: -0.285714px;
+        }
+        .articles-list__text{
+          margin-left: 24px;
+          margin-right: 24px;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 13px;
+          line-height: 18px;
+          letter-spacing: -0.203125px;
+          color: $text-color;
+        }
+      }
+    }
+  }
+}

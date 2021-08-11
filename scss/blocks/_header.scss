@@ -1,0 +1,75 @@
+//header-navigation
+$btn-bgColor : #33D35E;
+$two-bgColor:  #2AB6D9;
+$text-color: #9597A5;
+*{
+  font-family: "Public Sans", sans-serif;
+}
+header{
+  z-index: 9;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  background-color: #fff;
+  .navigation{
+    display: flex;
+    align-items: center;
+    .navigation__logo{
+      display: inline-block;
+      margin-top: 10px;
+    }
+    .navigation__navbar{
+      margin-left: 251px;
+      margin-right: auto;
+      .navbar__inner{
+        display: flex;
+        @include reset-list;
+        .navbar__item{
+          margin-left: 30px;
+          &:first-child{
+            margin-left: 0;
+          }
+          .navbar__link{
+            text-decoration: none;
+            color: $text-color;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 28px;
+            letter-spacing: -0.28125px;
+            &:hover{
+              color: #000;
+            }
+            &:active{
+              color: #33D35E;
+            }
+          }
+          .navbar__line {
+            width: 100%;
+            height: 4px;
+            //margin-bottom: 7px;
+            background-color: #33D35E;
+            display: block;
+            transition: all 0.1s linear;
+            transform: scale(0) translateY(20px);
+          }
+          .navbar__link:hover + .navbar__line {
+            transform: scale(1) translateY(24px);
+          }
+        }
+      }
+    }
+    .navigation__btn{
+      @include site-btn;
+      background-image: linear-gradient( 90deg, $btn-bgColor,  $two-bgColor);
+      transition: all 0.5s linear;
+      &:hover{
+        background-image: linear-gradient(90deg, $two-bgColor,  $btn-bgColor);
+      }
+      &:active{
+        background-image: linear-gradient(90deg, #089abf, #03952b);
+      }
+    }
+  }
+
+
+}
