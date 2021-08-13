@@ -6,30 +6,21 @@ $header-color: #2D314D;
   font-family: "Public Sans", sans-serif;
 }
   #one{
+    z-index: -1!important;
     background-color: #F4F5F7;
     position: relative;
-    .background{
-      width: 800px;
-      height: 643px;
-      position: absolute;
-      top: 0;
-      right: 0;
-      background: {
-        image: url("/img/hero-bg.svg");
-        repeat: no-repeat;
-        size: cover;
-        position: center top -70px;
 
-      };
-      .background__img{
-        width: 640px!important;
-        height: 890px!important;
-        transform: translateY(-75px) translateX(160px);
-        z-index: 0;
-      }
-    }
     .wrapperOne{
       z-index: 1;
+      .mobile-background {
+        background-image: url("/img/bac.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: none;
+        img{
+          width: 100%;
+        }
+      }
     .generation-block{
       padding-top: 170px;
       padding-bottom: 178px;
@@ -59,6 +50,90 @@ $header-color: #2D314D;
       }
     }
 
-
     }
   }
+
+@include breakpoint-down (586px) {
+  .container {
+    max-width: 100%;
+  }
+  .mobile-background{
+    display: block!important;
+    max-width: 100%;
+    img{
+      display: block;
+      width: 90%;
+      height: 90%;
+    }
+    //height: 379px;
+  }
+  .generation-block{
+    width: 80%!important;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 41px!important;
+    text-align: center;
+    display: block;
+  }
+  .background{
+    display: none;
+  }
+}
+@include breakpoint-down(760px) {
+    .container {
+      max-width: 100%;
+    }
+  .background{
+    display: none;
+  }
+  .mobile-background{
+    display: block!important;
+    max-width: 100%;
+    img{
+      display: block;
+      width: 90%;
+      height: 90%;
+    }
+    //height: 379px;
+  }
+
+  .generation-block{
+      width: 80%!important;
+      margin-left: 10%;
+      margin-right: 10%;
+      text-align: center;
+      display: block;
+    }
+    .background{
+      display: none!important;
+    }
+  .background__img{
+    display: none;
+  }
+  }
+@include breakpoint-between (760.1px, 1800px) {
+  .wrapperOne{
+    display: flex!important;
+    justify-content: space-between;
+  }
+  .generation-block{
+    padding-top: 60px!important;
+    width: 370px!important;
+  }
+  .background{
+    //width: 750px;
+    height: 650px;
+    transform: translateY(-50px);
+    background-image: url("/img/hero-bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+
+    img{
+      transform: translateY(15px);
+      z-index: 2!important;
+    }
+
+  }
+}

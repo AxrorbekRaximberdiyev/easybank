@@ -10,16 +10,17 @@ header{
   padding-top: 18px;
   padding-bottom: 18px;
   background-color: #fff;
+  overflow: hidden;
   .navigation{
     display: flex;
+    justify-content: space-between;
     align-items: center;
     .navigation__logo{
-      display: inline-block;
+      display: block;
       margin-top: 10px;
     }
     .navigation__navbar{
-      margin-left: 251px;
-      margin-right: auto;
+      margin-top: 5px;
       .navbar__inner{
         display: flex;
         @include reset-list;
@@ -45,7 +46,7 @@ header{
           }
           .navbar__line {
             width: 100%;
-            height: 4px;
+            height: 8px;
             //margin-bottom: 7px;
             background-color: #33D35E;
             display: block;
@@ -58,7 +59,13 @@ header{
         }
       }
     }
+    .navigation__hamburger-btn{
+      border: none;
+      background-color: transparent;
+      display: none;
+    }
     .navigation__btn{
+      display: inline-block;
       @include site-btn;
       background-image: linear-gradient( 90deg, $btn-bgColor,  $two-bgColor);
       transition: all 0.5s linear;
@@ -73,3 +80,83 @@ header{
 
 
 }
+@include breakpoint-down(586px) {
+  .header-navigation{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+  }
+  .container{
+    width: 100%;
+    padding: 0;
+  }
+  .navigation__logo{
+    display: inline-block;
+  }
+  .navigation__navbar{
+    display: none;
+  }
+  .navigation__hamburger-btn{
+    display: block!important;
+  }
+  .navigation__btn{
+    display: none!important;
+  }
+
+  .navbar__item{
+    margin-left: 10px!important;
+    &:first-child{
+      margin-left: 0!important;
+    }
+  }
+  .navbar__link{
+    font-size: 14px!important;
+  }
+  .logo__img{
+    width: 139px;
+    height: 20px;
+  }
+}
+
+@include breakpoint-down(735px) {
+  .header-navigation{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+  }
+  .container{
+    width: 100%;
+    padding: 0;
+  }
+  .navigation__logo{
+    display: inline-block;
+  }
+  .navigation__btn{
+    //display: none!important;
+  }
+
+  .navbar__item{
+    margin-left: 10px!important;
+    &:first-child{
+      margin-left: 0!important;
+    }
+  }
+  .navbar__link{
+    font-size: 14px!important;
+  }
+  .logo__img{
+    width: 139px;
+    height: 20px;
+  }
+}
+
+//@include breakpoint-up (800px) {
+//  .container{
+//    width: 100%;
+//  }
+//
+//}

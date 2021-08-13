@@ -49,8 +49,106 @@
           font-size: 16px;
           line-height: 26px;
           letter-spacing: -0.25px;
+          margin-bottom: 0!important;
         }
       }
     }
+  }
+}
+@include breakpoint-down (585px) {
+  .simple{
+
+  }
+  .simple__choose{
+    padding-top: 64px!important;
+    text-align: center;
+    width: 80%!important;
+    margin-bottom: 0!important;
+    padding-bottom: 0!important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .simple__inner{
+    display: block!important;
+  }
+  .simple__item{
+    text-align: center;
+    width: 90%!important;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+  .site-item_img{
+    margin-bottom: 12px!important;
+  }
+}
+@include breakpoint-between (585px, 735px) {
+  .simple__choose{
+    padding-top: 64px!important;
+    text-align: center;
+    width: 80%!important;
+    margin-bottom: 0!important;
+    padding-bottom: 0!important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .simple__inner{
+    display: flex!important;
+    flex-wrap: wrap;
+  }
+  .simple__item{
+    text-align: center;
+    width: 40%!important;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@include breakpoint-between (735px, 959.9px) {
+  .simple__choose{
+    padding-top: 64px!important;
+    text-align: center;
+    width: 60%!important;
+    margin-bottom: 0!important;
+    padding-bottom: 0!important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .simple__inner{
+    display: flex!important;
+    flex-wrap: wrap;
+  }
+  .simple__item{
+    width: 340px!important;
+    text-align: center;
+    //width: 40%!important;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@include breakpoint-between (960px, 1250px) {
+  .simple__choose{
+    padding-top: 64px!important;
+    text-align: center;
+    width: 60%!important;
+    margin-bottom: 0!important;
+    padding-bottom: 0!important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .simple__inner{
+    display: flex!important;
+    flex-wrap: wrap;
+  }
+  .simple__item{
+    width: 23%!important;
+    text-align: center;
+    //width: 40%!important;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
