@@ -2,6 +2,9 @@
 
 #twoo{
   background-color: #F2F2F2;
+  z-index: -1!important;
+  padding-bottom: 30px;
+  //transform: translateY(-50px);
   .simple{
 
     .simple__choose{
@@ -28,6 +31,7 @@
       @include reset-list;
       display: flex;
       justify-content: space-between;
+      padding-bottom: 50px;
       .site-item{
         width: 255px;
         .site-item_img{

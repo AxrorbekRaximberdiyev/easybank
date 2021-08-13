@@ -6,7 +6,9 @@ $text-color: #9597A5;
   font-family: "Public Sans", sans-serif;
 }
 header{
-  z-index: 9;
+  max-width: 100%;
+  z-index: 9!important;
+  position: sticky;
   padding-top: 18px;
   padding-bottom: 18px;
   background-color: #fff;
@@ -154,9 +156,16 @@ header{
   }
 }
 
-//@include breakpoint-up (800px) {
-//  .container{
-//    width: 100%;
-//  }
-//
-//}
+@include breakpoint-between (735px, 1250px) {
+  .navbar__item{
+    margin-left: 15px;
+    &:first-child{
+      margin-left: 0;
+    }
+  }
+  .header-navigation {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}

@@ -108,6 +108,7 @@ footer{
     margin-right: auto!important;
   }
   .center__inner{
+    margin-right: 30px;
     &:first-child{
       margin-top: 34px!important;
     }
@@ -129,3 +130,18 @@ footer{
 
 }
 
+@include breakpoint-down (1468px) {
+  .footer__center {
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
+  }
+  //.center__inner{
+  //  &:first-child{
+  //    margin-left: 75px!important;
+  //  }
+  //  margin-left: 35px!important;
+  //}
+
+
+}
